@@ -5,7 +5,7 @@
 - CSS
 - JS
 # **In-Class Assignments**
-- [ICA1](ica/ICA1--HowtoSearch.md)
+- [ICA1](ica/ICA1_HowtoSearch.pdf)
 - ICA2
 - ICA3
 - ICA4
