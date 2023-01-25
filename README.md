@@ -6,7 +6,7 @@
 - JS
 # **In-Class Assignments**
 - [ICA1](ica/ICA1_HowtoSearch.pdf)
-- ICA2
+- [ICA2](ica/ICA2_ExploringDirectoryStructures.pdf)
 - ICA3
 - ICA4
 - ICA5
