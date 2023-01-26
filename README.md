@@ -23,7 +23,7 @@
 
 # **Weekly Assignments**
 - [WA1](https://alekfs.github.io/wa/wa1.html)
-- WA2
+- [WA2](https://alekfs.github.io/wa/wa2.html)
 - WA3
 - WA4
 - WA5
