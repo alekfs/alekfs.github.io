@@ -1,7 +1,7 @@
 # alekfs.github.io
 
 # **Projects**
-- [HTML]((https://alekfs.github.io/html-midterm/page5.html))
+- [HTML](https://alekfs.github.io/html-midterm/page5.html)
 - CSS
 - JS
 # **In-Class Assignments**
