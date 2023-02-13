@@ -15,7 +15,6 @@ html {
 }
 
 
-
 h2 {
     margin: 0;
     font-size: 2em;
@@ -125,7 +124,7 @@ p {
 
 .card2 article p {
     padding: 1em;
-    line-height: 1.35;
+    line-height: 1.15;
     color: white;
 }
 
