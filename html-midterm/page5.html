@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog</title>
+</head>
+<body>
+    <h1>Changelog</h1>
+    <h2>Page 1</h2>
+    <ul>
+        <li>First error: Start tag seen without seeing a doctype first.<br>
+            Fixed by adding <code>< !DOCTYPE html ></code> in line 1.</li>
+        <li>Second error: This document appears to be written in English.<br>
+            Fixed by adding <code>< html lang="en" ></code> to line 2.</li>
+        <li>Third error: The character encoding was not declared. Proceeding using windows-1252.<br>
+            Fixed by adding rest of boiler plate code within the head: <code>< meta charset="UTF-8" >,
+            < meta http-equiv="X-UA-Compatible" content="IE=edge" >, < meta name="viewport" content="width=device-width, initial-scale=1.0 >"</code></li>
+        <li>Fourth error: Element e not allowed as child of element em in this context.<br>
+            <code>< e ></code> closing tag changed to <code>< em ></code> in line 77.</li>
+        <li>Fifth error: multiple Unmappable byte sequences: 9d.<br>
+            Rewrote all quation marks (") and apostrophes (').</li>
+    </ul>
+    <h2>Page 2</h2>
+    <ul>
+        <li>First error: Saw <>. Probable causes: Unescaped < (escape as &lt;) or mistyped start tag.<br>
+            Fixed by correcting closing tag to <code>< /b ></code> in line 25.</li>
+        <li>Second error: Element h2 not allowed as child of element b in this context.<br>
+            Fixed by changing <code>< b >< h3 >Interior< /h3 >< /b ></code> to <code>< h3 >< b >Interior< /b >< /h3 ></code> in line 51.</li>
+        <li>Third error: Bad value where do i go for attribute href on element a: Illegal character in path segment: space is not allowed.<br>
+            Fixed by adding the wikipedia link to "Segmental Arch" in the href: <code>href="https://en.wikipedia.org/wiki/Segmental_arch"</code> in line 55.</li>
+        <li>Fourth error: An h3 before h2<br>
+            Fixed by changing <code>< h3 >Description< /h3 ></code> to an h2 (line 35) and changing <code>< b >< h3 >Interior< /h3 >< /b ></code> to an h3 (line 51).</li>
+    </ul>
+    <h2>Page 3</h2>
+    <ul>
+        <li>First error: Element l not allowed as child of element ul in this context.<br>
+            Fixed by changing <code>< l >< /l ></code> to <code>< li >< /li ></code> in line 51.</li>
+        <li>Second error: Saw </>. Probable causes: Unescaped < (escape as &lt;) or mistyped end tag.<br>
+            Fixed by changing <code>< td >Lily< / ></code> to <code>< td >Lily</ td ></code> in line 80.</li>
+        <li>Third error: In line 78 the table row Zapata was displayed as a table head in bold.<br>
+            Fixed by changing the tag from <code>< th ></code> to <code>< td ></code> in line 78.</li>
+        <li>Fourth error: Table structure was incorrect given the format: First name, Last name, Age.<br>
+            Fixed by moving the first names, last names, and ages to the correct spot on the table.</li>
+    </ul>
+
+    <h2>Page 4</h2>
+    <ul>
+        <li>First error: Start tag seen without seeing a doctype first.<br>
+            Fixed by adding <code>< !DOCTYPE html ></code> in line 1.</li>
+        <li>Second error: No <code>alt</code> Attributes after the <code>img src</code>.<br>
+            Fixed by adding <code>alt</code> Attributes with descriptive text.</li>
+        <li>Third error: In line 36 no closing tag for <code>< td ></code>.<br>
+            Fixed by adding a closing tag <code>< td ></code>.</li>
+        <li>Fourth error: In line 41 no tags for <code>< td >< /td ></code>.<br>
+            Fixed by adding them.</li>
+        <li>Fifth error: Table structure was incorrect given the format: Dogs, Cats, Other?.<br>
+            Fixed by moving the dog, cat, and other? images to their correct spots.</li>
+    </ul>
+</body>
+</html>
