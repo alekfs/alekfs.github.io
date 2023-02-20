@@ -1,0 +1,22 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background-image: url("TDF2022.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#overlayLogo {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+#overlayImage {
+    position: fixed;
+}
