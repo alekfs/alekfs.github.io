@@ -1,14 +1,13 @@
 body, html {
     margin: 0;
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     padding: 0;
 }
 
-.background {
-    background-image: url("TDF2022.jpg");
-    height: 100%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+#background {
+    position: fixed;
+    height: 100%;
 }
 
 #overlayLogo {
@@ -17,6 +16,45 @@ body, html {
     right: 10px;
 }
 
-#overlayImage {
+.rectangle {
     position: fixed;
+    height: 25px;
+    width: 70px;
+    top: 10px;
+    left: 300px;
+    background-color: black;
+    opacity: 50%;
+}
+
+.rectangle2 {
+    position: fixed;
+    height: 25px;
+    width: 148px;
+    top: 10px;
+    left: 475px;
+    background-color: black;
+    opacity: 50%;
+}
+#distance {
+    position: fixed;
+    top: 12px;
+    left: 305px;
+    color: white;
+}
+
+#Group2 {
+    position: fixed;
+    top: 10px;
+    left: 450px;
+}
+#time {
+    position: fixed;
+    top: 12px;
+    left: 480px;
+    color: white;
+}
+#overlayTime {
+    position: fixed;
+    top: 10px;
+    left: 275px;
 }
