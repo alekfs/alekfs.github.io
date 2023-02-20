@@ -7,13 +7,14 @@ body, html {
 
 #background {
     position: fixed;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 #overlayLogo {
     position: fixed;
     top: 10px;
-    right: 10px;
+    left: 10px;
 }
 
 .rectangle {
