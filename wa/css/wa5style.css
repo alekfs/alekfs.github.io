@@ -5,8 +5,8 @@ body, html {
 
 #background {
     position: fixed;
-    min-height: auto;
-    max-height: auto;
+    min-width: 100%;
+    min-height: 100%;
 }
 
 #overlayLogo {
