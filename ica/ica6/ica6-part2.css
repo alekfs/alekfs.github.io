@@ -23,32 +23,42 @@ body{
     
 }
 #no0{
-    justify-self: start;
+    grid-column: 2;
+    grid-row: 4;
 }
 #no1{
-    justify-self: start;
+    grid-column: 1;
+    grid-row: 1;
 }
 #no2{
-    justify-self: end;
+    grid-column: 2;
+    grid-row: 1;
 }
 #no3{
-
+    grid-column: 3;
+    grid-row: 1;
 }
 #no4{
-
+    grid-column: 1;
+    grid-row: 2;
 }
 #no5{
-
+    grid-column: 2;
+    grid-row: 2;
 }
 #no6{
-
+    grid-column: 3;
+    grid-row: 2;
 }
 #no7{
-
+    grid-column: 1;
+    grid-row: 3;
 }
 #no8{
-
+    grid-column: 2;
+    grid-row: 3;
 }
 #no9{
-
+    grid-column: 3;
+    grid-row: 3;
 }
