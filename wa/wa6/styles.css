@@ -21,6 +21,7 @@ img {
   margin: 0 auto;
   padding: 0 20px;
   max-width: 980px;
+  display: grid;
 }
   
 nav {
@@ -59,6 +60,8 @@ nav a {
   height: 30%;
   width: 30%;
   grid-gap: 1px;
+  display: grid;
+  grid-template-columns: 100px 100px;
 }
 
 .feature {
@@ -69,26 +72,15 @@ nav a {
 
 article {
   grid-column-start: 1;
-  grid-row-start: 3;
-  flex: 50%;
-  
+  grid-column-end: 3;
 }
 
 aside {
-  grid-column-start: 4;
-  grid-column-end: end;
+  grid-column: 3;
 }
 
-.photo1 {
-  grid-column: 4 / span 2;
-  grid-row: 1;
-}
-.photo2 {
-  grid-column: 4 / 5;
-  grid-row: 1;
-}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   nav, nav a, nav ul {
     float: none;
     display: block;
