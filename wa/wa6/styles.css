@@ -30,7 +30,6 @@ nav {
   margin: auto;
   position: sticky;
   top: 0;
-  
 }
   
 nav ul {
@@ -40,17 +39,12 @@ nav ul {
   text-align: center;
   display: flex;
   justify-content: space-between;
-
 }
   
 nav a {
   color: #fff;
   text-decoration: none;
   padding: .5em 1em;
-  /* display: inline;
-  text-align: center;
-  text-decoration: none;
-  float: left; */
 }
   
 .photos {
@@ -61,7 +55,7 @@ nav a {
   width: 30%;
   grid-gap: 1px;
   display: grid;
-  grid-template-columns: 100px 100px;
+  grid-template-columns: 110px 110px;
 }
 
 .feature {
