@@ -1,0 +1,36 @@
+body{
+    background-color: khaki;
+}
+#box1{
+    width: 25vw;
+    height: 20vh;
+    background-color: indianred;
+}
+#box1:hover {
+    background-color: purple;
+    transition: 0.1s;
+  }
+
+#box2{
+    width: 25vw;
+    height: 20vh;
+    position: relative;
+    background-color: orangered;
+    animation-name: box2move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes box2move {
+    0%   {left:0px; top:0px;}
+    25%  {left:400px; top:0px;}
+    50%  {left:400px; top:400px;}
+    75%  {left:0px; top:400px;}
+    100% {left:0px; top:0px;}
+}
+
+/*Credit to w3 schools for the initial code that i made changes to (lines 19-24 and 28-32)
+    https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation4 */
