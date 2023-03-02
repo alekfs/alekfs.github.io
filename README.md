@@ -28,7 +28,7 @@
 - [WA4](https://alekfs.github.io/wa/wa4.html)
 - [WA5](https://alekfs.github.io/wa/wa5.html)
 - [WA6](https://alekfs.github.io/wa/wa6/index.html)
-- WA7
+- [WA7](https://alekfs.github.io/wa/wa7/wa7.html)
 - WA8
 - WA9
 - WA10

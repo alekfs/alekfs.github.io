@@ -9,7 +9,7 @@ body{
 #box1:hover {
     background-color: purple;
     transition: 0.1s;
-  }
+}
 
 #box2{
     width: 25vw;

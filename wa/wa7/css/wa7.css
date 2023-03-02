@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background-color: lightblue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav{
+    height: 50vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height:20px;
+    background-color: darkblue;
+}
+nav:hover{
+    background-color: blueviolet;
+    transition: 0.1s;
+}
+
+nav a{
+    width:10vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
+img{
+    width: 30vw;
+    height: 30vh;
+}
+img:hover{
+    width: 30vw;
+    height: 30vh;
+    transform: rotate(360deg);
+    transition: width 2s, height 2s, transform 3s;
+}
+
+#red-ball{
+    background-color: blueviolet;
+    width: 20px;
+    height:20px;
+    border-radius: 50%;
+    position: absolute;
+    left:5vw;
+    animation-name: circlemove;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes circlemove {
+0%   {left:5px; top:5px;}
+25%  {left:200px; top:5px;}
+50%  {left:200px; top:200px;}
+75%  {left:5px; top:200px;}
+100% {left:5px; top:5px;}
+}
