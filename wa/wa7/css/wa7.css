@@ -42,19 +42,18 @@ img:hover{
     width: 20px;
     height: 20px;
     border-radius: 100%;
-    left: 10px;
+    left: 50px;
     position: absolute;
     animation-name: circlemove;
-    animation-duration: 10s;
-    animation-timing-function: linear;
+    animation-duration: 8s;
     animation-delay: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
 @keyframes circlemove {
-0%   {left: 10px; top: 10px;}
-25%  {left: 200px; top: 10px;}
-50%  {left: 200px; top: 200px;}
-75%  {left: 10px; top: 200px;}
-100% {left: 10px; top: 10px;}
+0%   {left: 50px; top: 50px;}
+25%  {left: 100px; top: 50px;}
+50%  {left: 100px; top: 100px;}
+75%  {left: 50px; top: 100px;}
+100% {left: 50px; top: 50px;}
 }
