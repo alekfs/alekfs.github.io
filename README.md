@@ -7,13 +7,13 @@
 # **In-Class Assignments**
 - [ICA1](ica/ICA1_HowtoSearch.pdf)
 - [ICA2](ica/ICA2_ExploringDirectoryStructures.pdf)
-- [ICA3a](https://alekfs.github.io/ica/ica3a.html) [ICA3b](https://alekfs.github.io/ica/ica3b.html)
-- [ICA4](https://alekfs.github.io/ica/ica4.html)
+- [ICA3a](https://alekfs.github.io/ica/ica3/ica3a.html) [ICA3b](https://alekfs.github.io/ica/ica3/ica3b.html)
+- [ICA4](https://alekfs.github.io/ica/ica4/ica4.html)
 - [ICA5](https://alekfs.github.io/ica/ica5/ica5.html)
 - [ICA6](https://alekfs.github.io/ica/ica6/ica6-part1.html)
 - [ICA7](https://alekfs.github.io/ica/ica7/ica7.html)
 - ICA8
-- ICA9
+- [ICA9](https://alekfs.github.io/ica/ica9/ica9.html)
 - ICA10
 - ICA11
 - ICA12
