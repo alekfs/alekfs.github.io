@@ -30,7 +30,7 @@
 - [WA6](https://alekfs.github.io/wa/wa6/index.html)
 - [WA7](https://alekfs.github.io/wa/wa7/wa7.html)
 - WA8
-- WA9
+- [WA9](https://alekfs.github.io/wa/wa9/wa9.html)
 - WA10
 - WA11
 - WA12
