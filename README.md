@@ -14,7 +14,7 @@
 - [ICA7](https://alekfs.github.io/ica/ica7/ica7.html)
 - ICA8
 - [ICA9](https://alekfs.github.io/ica/ica9/ica9.html)
-- ICA10
+- [ICA10](https://alekfs.github.io/ica/ica10/ica10.html)
 - ICA11
 - ICA12
 - ICA13
