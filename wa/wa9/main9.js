@@ -10,7 +10,7 @@ function randomValueFromArray(array){
 const storyText = "It was 94 fahrenheit on the race track, so :insertx: decided to race. When he got to :inserty:, he looked at the other online opponents, ready to win. Then :insertz:. Bob (the person playing the character) could not describe how he was feeling, but in the end was not suprised, — :insertx: weighs 300 pounds. Sometimes thats what happens when you weigh that much. Good Games";
 const insertX = ["Bowser", "Funky Kong", "Yoshi"];
 const insertY = ["Luigi Circuit", "Rainbow Road", "Coconut Mall"];
-const insertZ = ["the race began and the character disconnected from the online race.", "mid race they dodged the shock in a star and pulled the bullet at the next item set.", "just as they were going to get first place, he was hit by a blue shell right before the finish line."];
+const insertZ = ["the race began and the character disconnected from the online race", "mid race they dodged the shock in a star and pulled the bullet at the next item set", "just as they were going to get first place, he was hit by a blue shell right before the finish line"];
 
 randomize.addEventListener('click', result);
 
