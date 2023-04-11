@@ -1,5 +1,5 @@
 const button = document.querySelector("#js-new-quote");
-button.addEventListener('click', getQuote);
+button.addEventListener("click", getQuote);
 
 // const answerButton = document.querySelector("#js-tweet");
 // answerButton.addEventListener('click', showAnswer);
@@ -9,20 +9,20 @@ const endpoint = "https://trivia.cyberwisp.com/getrandomchristmasquestion";
 async function getQuote() {
     //console.log("It works!");
     try {
-        const response = await fetch(endpoint)
+        const response = await fetch(endpoint);
         if (!response.ok) {
             throw Error(response.statusText);
         }
         const json = await response.json();
-        //console.log(json.question);
-        displayQuote(json.question)
-        //console.log(json.answer);
+        console.log(json.question);
+        displayQuote(json.question);
+        console.log(json.answer);
         showAnswer(json.answer);
 
     }
     catch(err) {
         console.log(err);
-        alert('failed to fetch new trivia');
+        alert("failed to fetch new trivia");
     }
 }
 function displayQuote(quote) {
