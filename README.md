@@ -35,7 +35,7 @@
 - [WA10](https://alekfs.github.io/wa/wa10/wa10.html)
 - [WA11](https://alekfs.github.io/wa/wa11/wa11.html)
 - [WA12](https://alekfs.github.io/wa/wa12/wa12.html)
-- WA13
+- [WA13](https://alekfs.github.io/wa/wa13/wa13.html)
 - WA14
 - WA15
 
