@@ -79,7 +79,7 @@ const coin = document.querySelector("#coin");
 		const volumeDisplay = document.querySelector("#volumeDisplay");
         const headsImageUrl = "heads.png";
         const tailsImageUrl = "tails.png";
-		let volume = 50;
+		let volume = 0;
         let isHeads = true;
 
 		function flipCoin() {
