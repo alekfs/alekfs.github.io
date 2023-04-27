@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Coin Flip Volume Slider</title>
 
     <link rel="stylesheet" href="wa13.css">
     <script defer src="wa13.js"></script>
 </head>
 <body>
-    <div>
+    <!-- <div>
         <p>Please select the volume you'd like.</p>
         <p class="output">50</p>
     </div>
-    <div><!-- plus/minus volume changer -->
+    <div> plus/minus volume changer
         <form>
             <input class="minus-botton" type="button" name="minus-button" value="MINUS">
             <input class="plus-botton" type="button" name="plus-button" value="PLUS">
@@ -23,7 +23,7 @@
             <input class="submit-botton" type="button" name="submit-button" value="SUBMIT">
         </form>
     </div>
-    <div> <!-- This will be a slider -->
+    <div>This will be a slider
         <div class="slidercontainer">
             <p>Please select the volume you'd like.</p>
             <input type="range" min="0" max="100" class="slider" id="myRange">
@@ -31,6 +31,13 @@
             <p class="slider-output"></p>
 
         </div>
+    </div> -->
+    <div id="coin"></div>
+	<div id="result"></div>
+    <div>
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+        <div id="volumeDisplay">Volume: 50</div>
     </div>
 </body>
-</html>
+</html> 

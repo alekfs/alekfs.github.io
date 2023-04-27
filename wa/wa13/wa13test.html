@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coin Flipper</title>
+	<style>
+		body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+		}
+
+    #coin {
+      background-image: url("heads.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 150px;
+      height: 150px;
+      cursor: pointer;
+      animation: spin 1s ease-in-out;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotateY(0deg);
+      }
+
+      50% {
+        transform: rotateY(360deg);
+      }
+
+      100% {
+        transform: rotateY(0deg);
+      }
+    }
+
+
+		#result {
+			font-size: 24px;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="coin"></div>
+	<div id="result"></div>
+    <div>
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+        <div id="volumeDisplay">Volume: 50</div>
+    </div>
+
+	<script>
+		const coin = document.querySelector("#coin");
+		const result = document.querySelector("#result");
+		const volumeSlider = document.querySelector("#volume");
+		const volumeDisplay = document.querySelector("#volumeDisplay");
+        const headsImageUrl = "heads.png";
+        const tailsImageUrl = "tails.png";
+		let volume = 50;
+        let isHeads = true;
+
+		function flipCoin() {
+			coin.style.animation = "none";
+			void coin.offsetWidth;
+			coin.style.animation = "spin 1s ease-in-out";
+
+			const randomNumber = Math.random();
+			if (randomNumber >= 0.5) {
+				volume += 5;
+				result.textContent = "Heads! Volume increased by 5";
+                coin.style.backgroundImage = `url(${headsImageUrl})`;
+                isHeads = true;
+			} else {
+				volume -= 5;
+				if (volume < 0) volume = 0;
+				result.textContent = "Tails! Volume decreased by 5";
+                coin.style.backgroundImage = `url(${tailsImageUrl})`;
+                isHeads = false;
+			}
+			console.log(`Current volume: ${volume}`);
+		}
+
+		coin.addEventListener("click", flipCoin);
+
+		coin.addEventListener("animationend", function() {
+			volumeDisplay.textContent = `Volume: ${volume}`;
+			volumeSlider.value = volume;
+		});
+
+        volumeSlider.addEventListener("input", () => {
+            volume = volumeSlider.value;
+            console.log(`Current volume: ${volume}`);
+            volumeDisplay.textContent = `Volume: ${volume}`;
+        });
+        
+        window.onload = () => {
+            volumeSlider.value = volume;
+        };
+	</script>
+</body>
+</html>
