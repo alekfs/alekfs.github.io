@@ -10,10 +10,6 @@ body {
     background-color: black;
 }
 
-#volume {
-    padding: 5px;
-}
-
 #coin {
     background-image: url("heads.png");
     background-size: contain;
@@ -21,6 +17,10 @@ body {
     width: 150px;
     height: 150px;
     cursor: pointer;
+}
+
+#result, #volumeDisplay {
+    padding: 5px;
 }
 
 @keyframes spin {
