@@ -3,7 +3,7 @@
 # **Projects**
 - [HTML](https://alekfs.github.io/html-midterm/page5.html)
 - [CSS](https://alekfs.github.io)
-- JS
+- [JS](https://alekfs.github.io/js/js.html)
 # **In-Class Assignments**
 - [ICA1](ica/ICA1_HowtoSearch.pdf)
 - [ICA2](ica/ICA2_ExploringDirectoryStructures.pdf)
