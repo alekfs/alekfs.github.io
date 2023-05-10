@@ -1,6 +1,6 @@
-/* reset/basic stuff */
-@import url("https://fonts.googleapis.com/css?family=Poppins:100,300,400,700,900");
-
+body {
+  overflow: hidden;
+}
 :root {
   font-size: 10px;
   --white: rgb(232, 239, 243);
@@ -12,7 +12,7 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Franklin Gothic Medium';
 }
 
 body {
@@ -20,15 +20,15 @@ body {
   color: var(--white);
 }
 
-/* the goods */
 #wrapper {
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   position: relative;
   overflow: hidden;
 }
 
 .text {
+  font-family: 'Franklin Gothic Medium';
   font-size: 24rem;
   font-weight: bold;
   color: var(--white);
@@ -46,6 +46,19 @@ body {
 .base-anim {
   animation: up-down 2.5s ease-in-out infinite alternate,
     rotate 5s ease-in-out infinite alternate;
+}
+
+#alek {
+  background: linear-gradient(
+    90deg,
+    rgb(194, 11, 11),
+    rgb(197, 9, 244),
+    rgb(0, 64, 255)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  max-width: max-content;
 }
 
 @keyframes up-down {
@@ -71,55 +84,45 @@ body {
   -webkit-text-stroke: 1px var(--white);
 }
 
-/* the rest */
-.nav-bar {
-  width: 100%;
-  display: flex;
-  justify-content: end;
+.card-outer {
+  padding: 20px;
+  overflow: hidden;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+  /* background: rgb(255, 255, 255); */
+
   position: relative;
-  z-index: 50;
 }
 
-.nav-button {
-  background: var(--white);
-  border: none;
-  color: var(--black);
-  font-size: 2rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  padding: 0.3em 0.9em;
-  text-align: right;
-  cursor: pointer;
+.card-inner {
+  width: 100%;
+  height: 100%;
+  background: rgb(14, 14, 14);
+
+
+  position: relative;
+  z-index: 3;
 }
 
-.vertical-bar-thingy {
-  font-size: 3rem;
-  font-weight: 300;
-  writing-mode: vertical-rl;
-  white-space: nowrap;
-  text-transform: uppercase;
-
-  background: var(--white);
-  color: var(--black);
-
-  padding: 0.25em;
-
-  height: 110vh;
+.spinning-border {
+  background: linear-gradient(
+    90deg,
+    rgb(194, 11, 11),
+    rgb(197, 9, 244),
+    rgb(0, 204, 255)
+  );
 
   position: absolute;
-  top: -10vh;
-  left: 0;
-  z-index: 50;
+  z-index: 2;
+  inset: 0;
+  scale: 2.5;
+
+  animation: spin 5s linear infinite;
 }
-
-.scroll-icon {
-  position: absolute;
-  left: 50%;
-  bottom: 40px;
-  z-index: 50;
-
-  transform: translateX(-50%);
-
-  color: var(--white);
-  opacity: 0.5;
-}
+  @keyframes spin {
+    from {
+      rotate: 0deg;
+    }
+    to {
+      rotate: 360deg;
+    }
+  }

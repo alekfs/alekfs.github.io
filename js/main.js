@@ -2,12 +2,12 @@ const allText = document.querySelectorAll(".text");
 
 let delay = 0;
 
-allText.forEach((el, idx) => {
-  el.style["animation-delay"] = `${delay}s`;
-  el.style["z-index"] = allText.length - idx;
-  el.classList.add("base-anim");
+allText.forEach((element, index) => {
+  element.style["animation-delay"] = `${delay}s`;
+  element.style["z-index"] = allText.length - index;
+  element.classList.add("base-anim");
 
-  delay += 0.15;
+  delay += 0.05;
 });
 
 document.getElementById("wrapper").addEventListener("mousemove", (e) => {
@@ -32,13 +32,13 @@ document.getElementById("wrapper").addEventListener("mousemove", (e) => {
 
   const top = minY + pxOffsetY;
 
-  allText.forEach((el, idx) => {
-    el.animate(
+  allText.forEach((element, index) => {
+    element.animate(
       {
         top: `${top}px`,
         left: `${left}px`,
       },
-      { duration: 1000, fill: "forwards", delay: idx * 50 }
+      { duration: 1000, fill: "forwards", delay: index * 50 }
     );
   });
 });
