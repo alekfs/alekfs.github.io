@@ -48,7 +48,6 @@ header {
     border-radius: 10px;
 }
 
-/* Flexbox Layout for About Section */
 .about-section, .hobby-section {
     display: flex;
     justify-content: space-between;
@@ -81,15 +80,16 @@ header {
     max-width: 700px;
 }
 
-/* Resume Section Styling */
-#resume {
-    padding: 50px 20px;
+/* Hide all sections except About Me by default */
+.content-section {
+    display: none; /* All sections hidden */
 }
 
-iframe {
-    margin-bottom: 20px;
+.content-section.active {
+    display: block; /* Active section is visible */
 }
 
+/* Button Styling */
 .btn {
     display: inline-block;
     padding: 10px 20px;
