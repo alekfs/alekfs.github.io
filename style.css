@@ -3,13 +3,28 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
     overflow-x: hidden;
 }
 
+/* Name Heading Styling */
+.main-header {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.name-heading {
+    font-size: 3.5rem; /* Large font size for your name */
+    color: #64b5f6; /* Accent color */
+    font-weight: bold;
+}
+
+/* Navbar Styling */
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #1f1f1f; /* Darker background for header */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -29,13 +44,17 @@ header {
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: #bdbdbd; /* Gray color for inactive links */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-link.active {
-    color: #007bff;
+    color: #64b5f6; /* Blue color for active link */
+}
+
+.nav-link:hover {
+    color: #90caf9; /* Hover effect for links */
 }
 
 /* About Me Section Styling */
@@ -43,8 +62,8 @@ header {
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: #1e1e1e; /* Dark background */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
 }
 
@@ -70,40 +89,41 @@ header {
     height: auto;
     max-width: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
 .about-text p, .hobby-text p {
     font-size: 1.2em;
     line-height: 1.6em;
-    color: #555;
+    color: #e0e0e0; /* Light text */
     max-width: 700px;
 }
 
 /* Hide all sections except About Me by default */
 .content-section {
-    display: none; /* All sections hidden */
+    display: none; /* All sections hidden by default */
 }
 
 .content-section.active {
-    display: block; /* Active section is visible */
+    display: block; /* Show active section */
 }
 
 /* Button Styling */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    padding: 15px 30px;
+    background-color: #64b5f6;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
+    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    text-decoration: none; /* Remove any text underline */
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #42a5f5;
 }
 
 /* Responsive Styling */
@@ -120,41 +140,8 @@ header {
     .about-text, .hobby-text {
         text-align: center;
     }
-}
 
-/* Resume Section Styling */
-#resume {
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    height: 100vh; /* Make resume section full viewport height to center the button */
+    .name-heading {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
 }
-
-/* Resume Button Container Styling */
-.resume-btn-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1; /* Make sure the button is centered vertically within the section */
-}
-
-/* Button Styling */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none; /* Remove any text underline */
-}
-
-.btn:hover {
-    background-color: #0056b3;
-}
-
