@@ -60,7 +60,7 @@ header {
 
 /* About Me Section Styling */
 .about-container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 50px 20px;
     background-color: #1e1e1e; /* Dark background */
@@ -77,7 +77,7 @@ header {
 
 .about-image {
     margin-top: 20px;
-    max-width: 300px;
+    max-width: 200px; /* Shrink the profile image */
 }
 
 .profile-picture {
@@ -87,66 +87,37 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
-/* Full-Screen Collage Section */
+/* Collage Section */
 .collage {
-    position: relative;
-    width: 100vw;
-    height: 100vh; /* Full screen height */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    grid-template-rows: repeat(2, 1fr); /* 2 rows */
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
 }
 
-.collage-img {
-    position: absolute;
+.collage img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    object-fit: cover; /* Ensure images cover space without distortion */
 }
 
 .collage-img1 {
-    top: 0;
-    left: 0;
-    width: 45%;
-    height: 45%;
+    grid-column: span 2; /* Spanning two columns */
+    grid-row: span 2; /* Spanning two rows */
 }
 
-.collage-img2 {
-    top: 10%;
-    left: 50%;
-    width: 45%;
-    height: 45%;
+/* Hide all sections except About Me by default */
+.content-section {
+    display: none; /* Hidden by default */
 }
 
-.collage-img3 {
-    top: 45%;
-    left: 10%;
-    width: 40%;
-    height: 40%;
-}
-
-.collage-img4 {
-    top: 50%;
-    left: 60%;
-    width: 35%;
-    height: 35%;
-}
-
-.collage-img5 {
-    top: 70%;
-    left: 35%;
-    width: 40%;
-    height: 40%;
-}
-
-.about-text p, .hobby-text p {
-    font-size: 1.2em;
-    line-height: 1.6em;
-    color: #e0e0e0; /* Light text */
-    max-width: 700px;
-    margin-bottom: 20px;
+.content-section.active {
+    display: block; /* Visible section */
 }
 
 /* Centered Button in Resume Section */
@@ -185,17 +156,7 @@ header {
     }
 
     .collage {
-        height: 300px; /* Adjust for smaller screens */
-    }
-
-    .collage-img {
-        width: 100%;
-        height: auto;
-    }
-
-    .collage-img1, .collage-img2, .collage-img3, .collage-img4, .collage-img5 {
-        position: relative;
-        width: 100%;
-        height: auto;
+        grid-template-columns: 1fr; /* Single column for smaller screens */
+        grid-template-rows: repeat(5, 1fr); /* Stack images vertically */
     }
 }
