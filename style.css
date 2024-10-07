@@ -87,21 +87,23 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
-/* Collage Section */
+/* Full-Screen Collage Section */
 .collage {
     position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: 400px; /* Adjust height as needed */
-    margin-top: 20px;
+    width: 100vw;
+    height: 100vh; /* Full screen height */
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .collage-img {
     position: absolute;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    object-fit: cover; /* Ensure images cover space without distortion */
 }
 
 .collage-img1 {
@@ -147,18 +149,15 @@ header {
     margin-bottom: 20px;
 }
 
-/* Hide all sections except About Me by default */
-.content-section {
-    display: none; /* All sections hidden by default */
+/* Centered Button in Resume Section */
+.resume-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.content-section.active {
-    display: block; /* Show active section */
-}
-
-/* Button Styling */
 .btn {
-    display: inline-block;
     padding: 15px 30px;
     background-color: #5a5a5a; /* Neutral button color */
     color: #ffffff;
