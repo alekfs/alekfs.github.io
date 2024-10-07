@@ -78,22 +78,24 @@ header {
 /* Profile Image Styling */
 .about-image {
     margin-top: 20px;
-    max-width: 300px; /* Increase the size of the profile image */
+    width: 100%; /* Allow the container to expand */
+    max-width: 400px; /* Set a larger size for the image */
 }
 
 .profile-picture {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Ensure the image takes up the full width of its container */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
-/* For larger screens, increase the profile image size */
+/* For larger screens, ensure the profile image can scale up */
 @media (min-width: 1024px) {
     .about-image {
-        max-width: 400px; /* Even larger on wider screens */
+        max-width: 500px; /* Even larger on wider screens */
     }
 }
+
 
 /* Collage Section */
 .collage {
