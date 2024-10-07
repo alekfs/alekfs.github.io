@@ -126,7 +126,9 @@ header {
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Make resume section full viewport height to center the button */
 }
 
 /* Resume Button Container Styling */
@@ -134,22 +136,24 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px; /* Adjust the height as needed for vertical centering */
-    width: 100%;
+    flex-grow: 1; /* Make sure the button is centered vertically within the section */
 }
 
+/* Button Styling */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 15px 30px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
+    text-align: center;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-top: 20px;
+    text-decoration: none; /* Remove any text underline */
 }
 
 .btn:hover {
     background-color: #0056b3;
 }
+
