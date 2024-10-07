@@ -17,8 +17,9 @@ body {
 
 .name-heading {
     font-size: 3.5rem; /* Large font size for your name */
-    color: #64b5f6; /* Accent color */
+    color: #ffffff; /* Neutral white for the name */
     font-weight: bold;
+    border: none; /* Remove any border */
 }
 
 /* Navbar Styling */
@@ -44,17 +45,17 @@ header {
 
 .nav-link {
     text-decoration: none;
-    color: #bdbdbd; /* Gray color for inactive links */
+    color: #e0e0e0; /* Light gray for inactive links */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-link.active {
-    color: #64b5f6; /* Blue color for active link */
+    color: #ffffff; /* White for active link */
 }
 
 .nav-link:hover {
-    color: #90caf9; /* Hover effect for links */
+    color: #c0c0c0; /* Light hover effect */
 }
 
 /* About Me Section Styling */
@@ -84,12 +85,25 @@ header {
     flex: 2;
 }
 
-.profile-picture, .hobby-picture {
+.profile-picture {
     width: 100%;
     height: auto;
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
+}
+
+/* Collage for Hobbies Section */
+.collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two images per row */
+    gap: 10px;
+}
+
+.collage img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Softer shadows for images */
 }
 
 .about-text p, .hobby-text p {
@@ -112,7 +126,7 @@ header {
 .btn {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #64b5f6;
+    background-color: #5a5a5a; /* Neutral button color */
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -123,7 +137,7 @@ header {
 }
 
 .btn:hover {
-    background-color: #42a5f5;
+    background-color: #3d3d3d;
 }
 
 /* Responsive Styling */
@@ -143,5 +157,9 @@ header {
 
     .name-heading {
         font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+
+    .collage {
+        grid-template-columns: 1fr; /* One image per row for small screens */
     }
 }
