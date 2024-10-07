@@ -38,20 +38,60 @@ header {
     color: #007bff;
 }
 
-.content-section {
+/* About Me Section Styling */
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 50px 20px;
-    display: none; /* Hide all sections by default */
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
-.content-section.active {
-    display: block; /* Show only the active section */
+/* Flexbox Layout for About Section */
+.about-section, .hobby-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; /* Space between image and text */
+    margin-bottom: 50px;
 }
 
-.hidden {
-    display: none;
+.about-image, .hobby-image {
+    flex: 1;
+    max-width: 300px;
+}
+
+.about-text, .hobby-text {
+    flex: 2;
+}
+
+.profile-picture, .hobby-picture {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.about-text p, .hobby-text p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #555;
+    max-width: 700px;
+}
+
+/* Resume Section Styling */
+#resume {
+    padding: 50px 20px;
+}
+
+iframe {
+    margin-bottom: 20px;
 }
 
 .btn {
+    display: inline-block;
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -64,4 +104,20 @@ header {
 
 .btn:hover {
     background-color: #0056b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .about-section, .hobby-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image, .hobby-image {
+        margin-bottom: 20px;
+    }
+
+    .about-text, .hobby-text {
+        text-align: center;
+    }
 }
