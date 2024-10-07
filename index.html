@@ -2,34 +2,60 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Midterm</title>
-    <link rel="stylesheet" href="css/indexstyle.css">
+    <meta name="description" content="Personal website showcasing featured projects, resume, and contact information.">
+    <title>Your Name | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    
 </head>
 <body>
-    <nav>
-        <ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">Linked In</a>
-          </li>
-          <li>
-            <a href="#">Resume</a>
-          </li>
-        </ul>
-      </nav>
-    <h2 style="white-space:pre-wrap;" class="">hi!</h2>
-    <p class="sqsrte-small preFlex flexIn" style="white-space: pre-wrap; transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); transition-duration: 0.65s;">
-        My name is Alek and currently studying in the undergraduate <a href="https://www.colorado.edu/atlas/academics/undergraduate">CTD</a> program, at the University of Colorado Boulder.
-    </p>
-    <p class="sqsrte-small preFlex flexIn" style="white-space: pre-wrap; transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1); transition-duration: 0.65s;">
-        Born here in Boulder, CO and the typical Colorado native. Avid cyclist including mountain biking, gravel and cyclocross.
-        Though I have never used Word for layout design again, I have continued honing and expanding my design skills to include digital, print, and motion design. 
-        I also found a love for science and space in particular after I took an astronomy class on a whim. Nowadays, I use my creative skills to communicate my passion for learning and science and to 
-        share my wonder for the world with everyone. 
-        I currently live in Boulder, CO with my cat Sourdough, and as many houseplants as I can manage to keep alive – usually between 0 and 3.</p>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#about" class="logo">Alek Feehan-Schuler</a>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Featured Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Section: About Me -->
+    <main id="about" class="main-content">
+        <div class="container">
+            <h1>Hello, I'm Alek</h1>
+            <p>I'm a [Your Profession] with a passion for [Your Interests or Focus]. I enjoy creating innovative solutions and collaborating on exciting projects. Scroll through to learn more about me and explore my work!</p>
+        </div>
+    </main>
+
+    <!-- Placeholder Sections -->
+    <section id="projects" class="section">
+        <h1>Featured Projects</h1>
+        <p>Projects will be displayed here.</p>
+    </section>
+
+    <section id="resume" class="section">
+        <h1>Resume</h1>
+        <p>Resume details will be shown here.</p>
+        <a href="your-resume.pdf" class="btn">Download Resume</a>
+    </section>
+
+    <section id="contact" class="section">
+        <h1>Contact</h1>
+        <p>Contact information will be available here.</p>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer> -->
 </body>
 </html>
