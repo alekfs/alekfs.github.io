@@ -79,7 +79,7 @@ header {
 .about-image {
     margin-top: 20px;
     width: 100%; /* Allow the container to expand */
-    max-width: 400px; /* Set a larger size for the image */
+    max-width: 600px; /* Increase the size of the profile image */
 }
 
 .profile-picture {
@@ -92,7 +92,7 @@ header {
 /* For larger screens, ensure the profile image can scale up */
 @media (min-width: 1024px) {
     .about-image {
-        max-width: 500px; /* Even larger on wider screens */
+        max-width: 700px; /* Even larger on wider screens */
     }
 }
 
