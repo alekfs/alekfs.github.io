@@ -2,17 +2,17 @@
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.content-section');
 
-// Function to show the correct section
+// Function to show the correct section and hide others
 function showSection(sectionId) {
     sections.forEach(section => {
-        section.classList.add('hidden');  // Hide all sections
-        section.classList.remove('active');  // Remove active class
+        section.classList.remove('active');  // Hide all sections
+        section.classList.add('hidden');     // Add hidden class
     });
 
     // Show the selected section
     const targetSection = document.getElementById(sectionId);
+    targetSection.classList.add('active');  // Make it visible
     targetSection.classList.remove('hidden');
-    targetSection.classList.add('active');
 }
 
 // Event listener for navigation clicks
