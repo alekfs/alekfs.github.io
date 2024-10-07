@@ -101,12 +101,12 @@ header {
     position: relative; /* Enable positioning of child elements */
     width: 100%;
     max-width: 900px;
-    height: auto;
+    height: 500px; /* Adjust height as needed */
     margin: 20px auto;
 }
 
 .collage img {
-    width: 100%; /* Ensure images maintain full width of their containers */
+    width: 200px; /* Keep image sizes controlled */
     height: auto;
     object-fit: cover; /* Prevent image distortion */
     border-radius: 10px;
@@ -122,38 +122,27 @@ header {
 }
 
 .collage-img2 {
-    top: 20px;
-    left: 50px;
+    top: 30px;
+    left: 150px;
     z-index: 4; /* Slightly behind Image 1 */
 }
 
 .collage-img3 {
-    top: 40px;
-    left: 100px;
+    top: 100px;
+    left: 300px;
     z-index: 3; /* Slightly behind Image 2 */
 }
 
 .collage-img4 {
-    top: 60px;
-    left: 150px;
-    z-index: 2; /* Slightly behind Image 3 */
+    top: 150px;
+    left: 80px;
+    z-index: 2; /* Behind Image 3 */
 }
 
 .collage-img5 {
-    top: 80px;
-    left: 200px;
+    top: 200px;
+    left: 230px;
     z-index: 1; /* Furthest back */
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-    .collage {
-        max-width: 100%; /* Full width on smaller screens */
-    }
-
-    .collage img {
-        width: 100%; /* Ensure images resize for smaller screens */
-    }
 }
 
 /* Hide all sections except About Me by default */
@@ -201,12 +190,11 @@ header {
     }
 
     .collage {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-        grid-template-rows: repeat(5, 1fr); /* Stack images vertically */
+        height: auto; /* Allow it to adapt to the number of images */
     }
 
-    .collage-img1, .collage-img2, .collage-img3, .collage-img4, .collage-img5 {
-        grid-column: 1; /* Single column layout */
-        grid-row: auto; /* Stack vertically */
+    .collage img {
+        width: 100px; /* Shrink images for smaller screens */
+        position: relative; /* Stack them vertically on smaller screens */
     }
 }
