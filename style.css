@@ -70,40 +70,73 @@ header {
 
 .about-section, .hobby-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: 30px; /* Space between image and text */
-    margin-bottom: 50px;
+    text-align: center;
 }
 
-.about-image, .hobby-image {
-    flex: 1;
+.about-image {
+    margin-top: 20px;
     max-width: 300px;
-}
-
-.about-text, .hobby-text {
-    flex: 2;
 }
 
 .profile-picture {
     width: 100%;
     height: auto;
-    max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
 }
 
-/* Collage for Hobbies Section */
+/* Collage Section */
 .collage {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two images per row */
-    gap: 10px;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px; /* Adjust height as needed */
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.collage img {
-    width: 100%;
+.collage-img {
+    position: absolute;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Softer shadows for images */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.collage-img1 {
+    top: 0;
+    left: 0;
+    width: 45%;
+    height: 45%;
+}
+
+.collage-img2 {
+    top: 10%;
+    left: 50%;
+    width: 45%;
+    height: 45%;
+}
+
+.collage-img3 {
+    top: 45%;
+    left: 10%;
+    width: 40%;
+    height: 40%;
+}
+
+.collage-img4 {
+    top: 50%;
+    left: 60%;
+    width: 35%;
+    height: 35%;
+}
+
+.collage-img5 {
+    top: 70%;
+    left: 35%;
+    width: 40%;
+    height: 40%;
 }
 
 .about-text p, .hobby-text p {
@@ -111,6 +144,7 @@ header {
     line-height: 1.6em;
     color: #e0e0e0; /* Light text */
     max-width: 700px;
+    margin-bottom: 20px;
 }
 
 /* Hide all sections except About Me by default */
@@ -147,19 +181,22 @@ header {
         text-align: center;
     }
 
-    .about-image, .hobby-image {
+    .about-image {
         margin-bottom: 20px;
     }
 
-    .about-text, .hobby-text {
-        text-align: center;
-    }
-
-    .name-heading {
-        font-size: 2.5rem; /* Adjust heading size for smaller screens */
-    }
-
     .collage {
-        grid-template-columns: 1fr; /* One image per row for small screens */
+        height: 300px; /* Adjust for smaller screens */
+    }
+
+    .collage-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .collage-img1, .collage-img2, .collage-img3, .collage-img4, .collage-img5 {
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 }
