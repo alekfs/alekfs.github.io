@@ -1,47 +1,36 @@
-// Mobile Nav Toggle
-const navToggle = document.getElementById('nav-toggle');
-const navList = document.getElementById('nav-list');
+// Get all navigation links and content sections
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('.content-section');
 
-navToggle.addEventListener('click', () => {
-    navList.classList.toggle('active');
-});
+// Function to show the correct section
+function showSection(sectionId) {
+    sections.forEach(section => {
+        section.classList.add('hidden');  // Hide all sections
+        section.classList.remove('active');  // Remove active class
+    });
 
-// Smooth Scroll for Anchor Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+    // Show the selected section
+    const targetSection = document.getElementById(sectionId);
+    targetSection.classList.remove('hidden');
+    targetSection.classList.add('active');
+}
 
-        // Smooth scroll
-        window.scroll({
-            top: target.offsetTop - 70, // Adjusts for navbar height
-            behavior: 'smooth'
-        });
+// Event listener for navigation clicks
+navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent default link behavior
 
-        // Remove "active" class from all links and apply to clicked link
-        document.querySelectorAll('.nav-list a').forEach(link => {
-            link.classList.remove('active');
-        });
+        // Remove active class from all nav links
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add active class to clicked link
         this.classList.add('active');
+
+        // Show the section based on the clicked link
+        const sectionId = this.getAttribute('data-section');
+        showSection(sectionId);
     });
 });
 
-// Scroll Event Listener to update active link on scroll
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const scrollY = window.pageYOffset;
-
-    sections.forEach(current => {
-        const sectionHeight = current.offsetHeight;
-        const sectionTop = current.offsetTop - 75; // Adjust for nav height
-        const sectionId = current.getAttribute('id');
-        const navLink = document.querySelector(`.nav-list a[href="#${sectionId}"]`);
-
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelectorAll('.nav-list a').forEach(link => {
-                link.classList.remove('active');
-            });
-            navLink.classList.add('active');
-        }
-    });
-});
+// Show "About Me" section by default on load
+showSection('about');
