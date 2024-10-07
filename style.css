@@ -103,6 +103,9 @@ header {
     max-width: 900px;
     height: 500px; /* Adjust height as needed */
     margin: 20px auto;
+    display: flex;
+    justify-content: center; /* Center the collage horizontally */
+    align-items: center; /* Center the collage vertically */
 }
 
 .collage img {
