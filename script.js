@@ -6,12 +6,12 @@ const sections = document.querySelectorAll('.content-section');
 function showSection(sectionId) {
     sections.forEach(section => {
         section.classList.remove('active');  // Hide all sections
-        section.classList.add('hidden');     // Add hidden class
+        section.classList.add('hidden');     // Ensure hidden class is added
     });
 
     // Show the selected section
     const targetSection = document.getElementById(sectionId);
-    targetSection.classList.add('active');  // Make it visible
+    targetSection.classList.add('active');  // Make the selected section visible
     targetSection.classList.remove('hidden');
 }
 
