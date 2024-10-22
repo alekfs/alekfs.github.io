@@ -107,17 +107,19 @@ header {
     margin: 20px auto;
 }
 
-/* Collage image styling */
+/* Collage image styling with adjustments */
 .collage img {
-    width: 48%; /* Each image takes up 48% of the container width to fit two images per row */
-    height: auto; /* Ensure images maintain aspect ratio and are not cropped */
+    width: 100%; /* Full width */
+    height: 400px; /* Adjust this value to show more or less of the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    object-position: center; /* Center the visible area of the image */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
 }
 
 /* Ensure the 5th image is centered below the others */
 .collage-img5 {
-    width: 48%; /* Same width as other images */
+    width: 100%; /* Same width as other images */
     margin-left: auto;
     margin-right: auto;
 }
@@ -172,6 +174,7 @@ header {
 
     .collage img {
         width: 100%; /* Make each image take full width on smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
     }
 
     .collage-img5 {
