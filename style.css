@@ -98,39 +98,29 @@ header {
 
 /* Collage Section for Stacked Images */
 .collage {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    grid-template-rows: auto; /* Automatic row heights */
-    gap: 10px; /* Space between the images */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto a new line */
+    gap: 10px; /* Adds space between images */
+    justify-content: center; /* Center images in the container */
     width: 100%;
     max-width: 900px;
     margin: 20px auto;
 }
 
-/* Adjust each image placement */
-.collage-img1 {
-    grid-column: 1 / span 1; /* First column */
-    grid-row: 1; /* First row */
+/* Collage image styling */
+.collage img {
+    width: 48%; /* Each image takes up 48% of the container width to fit two images per row */
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
 }
 
-.collage-img2 {
-    grid-column: 2 / span 1; /* Second column */
-    grid-row: 1; /* First row */
-}
-
-.collage-img3 {
-    grid-column: 1 / span 1; /* First column */
-    grid-row: 2; /* Second row */
-}
-
-.collage-img4 {
-    grid-column: 2 / span 1; /* Second column */
-    grid-row: 2; /* Second row */
-}
-
+/* Ensure the 5th image is centered below the others */
 .collage-img5 {
-    grid-column: 2 / span 1; /* Second column */
-    grid-row: 3; /* Third row */
+    width: 48%; /* Same width as other images */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Hide all sections except About Me by default */
@@ -178,12 +168,14 @@ header {
     }
 
     .collage {
-        grid-template-columns: 1fr; /* Single column for smaller screens */
-        grid-template-rows: repeat(5, 1fr); /* Stack images vertically */
+        flex-direction: column; /* Stack images vertically on small screens */
     }
 
-    .collage-img1, .collage-img2, .collage-img3, .collage-img4, .collage-img5 {
-        grid-column: 1; /* Single column layout */
-        grid-row: auto; /* Stack vertically */
+    .collage img {
+        width: 100%; /* Make each image take full width on smaller screens */
+    }
+
+    .collage-img5 {
+        width: 100%; /* Full width for 5th image on small screens */
     }
 }
