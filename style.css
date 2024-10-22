@@ -110,8 +110,7 @@ header {
 /* Collage image styling */
 .collage img {
     width: 48%; /* Each image takes up 48% of the container width to fit two images per row */
-    height: auto;
-    object-fit: cover;
+    height: auto; /* Ensure images maintain aspect ratio and are not cropped */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow for depth */
 }
