@@ -1,36 +1,27 @@
-// Get all navigation links and content sections
+// Navigation and section display
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.content-section');
 
-// Function to show the correct section and hide others
+// Function to show sections based on navigation
 function showSection(sectionId) {
     sections.forEach(section => {
-        section.classList.remove('active');  // Hide all sections
-        section.classList.add('hidden');     // Ensure hidden class is added
+        section.classList.remove('active');
     });
-
-    // Show the selected section
-    const targetSection = document.getElementById(sectionId);
-    targetSection.classList.add('active');  // Make the selected section visible
-    targetSection.classList.remove('hidden');
+    document.getElementById(sectionId).classList.add('active');
 }
 
-// Event listener for navigation clicks
+// Event listeners for navbar clicks
 navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
-        e.preventDefault(); // Prevent default link behavior
-
-        // Remove active class from all nav links
+        e.preventDefault();
         navLinks.forEach(link => link.classList.remove('active'));
-
-        // Add active class to clicked link
         this.classList.add('active');
-
-        // Show the section based on the clicked link
-        const sectionId = this.getAttribute('data-section');
-        showSection(sectionId);
+        showSection(this.getAttribute('data-section'));
     });
 });
 
-// Show "About Me" section by default on load
-showSection('about');
+// Enhanced entry animation for the homepage
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelector(".name-heading").classList.add("fade-in");
+    document.querySelector(".intro-text").classList.add("slide-in");
+});
