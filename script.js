@@ -1,27 +1,39 @@
-// Navigation and section display
+// Get all navigation links and content sections
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.content-section');
 
-// Function to show sections based on navigation
-function showSection(sectionId) {
+// Function to show and scroll to the correct section
+function navigateToSection(sectionId) {
     sections.forEach(section => {
-        section.classList.remove('active');
+        section.classList.remove('active');  // Hide all sections
+        section.classList.add('hidden');     // Ensure hidden class is added
     });
-    document.getElementById(sectionId).classList.add('active');
+
+    // Show the selected section and scroll to it
+    const targetSection = document.getElementById(sectionId);
+    targetSection.classList.add('active');  // Make the selected section visible
+    targetSection.classList.remove('hidden');
+
+    // Smooth scroll to the selected section
+    targetSection.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Event listeners for navbar clicks
+// Event listener for navigation clicks
 navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevent default link behavior
+
+        // Remove active class from all nav links
         navLinks.forEach(link => link.classList.remove('active'));
+
+        // Add active class to clicked link
         this.classList.add('active');
-        showSection(this.getAttribute('data-section'));
+
+        // Show the section based on the clicked link
+        const sectionId = this.getAttribute('data-section');
+        navigateToSection(sectionId);
     });
 });
 
-// Enhanced entry animation for the homepage
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelector(".name-heading").classList.add("fade-in");
-    document.querySelector(".intro-text").classList.add("slide-in");
-});
+// Show "About Me" section by default on load
+navigateToSection('about');
