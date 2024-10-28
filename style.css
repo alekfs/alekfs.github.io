@@ -5,6 +5,7 @@ body {
     color: #e0e0e0;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 /* Home Header Styling */
@@ -35,6 +36,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .learn-more-btn:hover {
@@ -69,20 +71,86 @@ body {
     color: #ffffff;
 }
 
-/* Scrolling Hobbies Section */
+/* About Me Page Header Styling */
+.about-header {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #1f1f1f;
+    color: #ffffff;
+}
+
+.about-header h1 {
+    font-family: 'capsule', sans-serif;
+    font-size: 3rem;
+    color: #ffffff;
+}
+
+.about-intro {
+    max-width: 800px;
+    margin: 1rem auto;
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    line-height: 1.6;
+}
+
+/* Hobby Section Styling */
+.hobby-section {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.hobby-section h2 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.hobby-description {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    color: #c0c0c0;
+}
+
+/* Scrolling Hobby Image Gallery */
 .scrolling-hobbies {
     display: flex;
     overflow-x: auto;
     gap: 15px;
-    padding: 10px;
+    padding: 1rem;
     white-space: nowrap;
+    justify-content: center;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .scrolling-hobbies img {
-    height: 150px;
+    height: 200px;
     width: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer Contact Section */
+.contact-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.contact-footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-footer a:hover {
+    color: #c0c0c0;
+    text-decoration: underline;
 }
 
 /* Resume Button */
